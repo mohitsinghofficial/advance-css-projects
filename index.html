@@ -6,128 +6,376 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Animations by Mohit Singh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Caveat:wght@700&display=swap"
+        rel="stylesheet">
 </head>
 <style>
-    body {
+    * {
         margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
         padding: 2rem;
-        background-color: #fff;
-        width: 100vw;
-        height: 100vh;
-        font-family: candara;
-        overflow: hidden;
+        overflow-x: hidden;
     }
 
     nav {
-        display: grid;
-        place-items: center;
-        font-size: 3rem;
-        position: relative;
-        top: -20px;
+        text-align: center;
+        margin-bottom: 2rem;
+        animation: slideDown 0.8s ease-out;
+    }
+
+    nav p {
+        font-family: 'Caveat', cursive;
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         font-weight: 700;
     }
 
-    div {
-        width: auto;
-        height: auto;
-        background-color: #fff;
-        border: 5px solid #000;
-        border-radius: 1rem;
-        float: left;
-        padding: 1rem 2rem;
-        position: relative;
-        left: 8rem;
-        top: -20px;
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 2rem;
+        max-width: 1400px;
+        margin: 0 auto;
+        animation: fadeIn 1s ease-out;
     }
 
-    div a {
-        text-decoration: none;
-        font-size: 26px;
-        color: rgb(0, 66, 75);
-        font-family: Ebrima;
-        overflow: hidden;
+    .links-container {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 2rem;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        max-height: 70vh;
+        overflow-y: auto;
+        border: 2px solid rgba(255, 255, 255, 0.5);
     }
 
-    div a::after {
-        content: "";
-        position: absolute;
-        width: 0%;
-        height: .5%;
-        left: 4%;
-        margin-top: 8%;
-        background-color: #3b4c4d;
+    .links-container::-webkit-scrollbar {
+        width: 10px;
     }
 
-    div a:hover::after {
-        transition: 3s;
-        width: 90%;
+    .links-container::-webkit-scrollbar-track {
+        background: rgba(102, 126, 234, 0.1);
+        border-radius: 10px;
     }
 
-    div a::before {
-        content: "";
-        position: absolute;
-        width: 2%;
-        height: 5.6%;
-        margin-top: 2%;
-        margin-left: -4%;
-        background-color: #3b4c4d;
-        /* transform: skewX(-20deg); */
-        /* display: none; */
+    .links-container::-webkit-scrollbar-thumb {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        border-radius: 10px;
     }
 
-    div a:hover::before {
+    .links-container::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(135deg, #764ba2, #667eea);
+    }
+
+    .category {
+        margin-bottom: 1.5rem;
+    }
+
+    .category h3 {
+        color: #667eea;
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #667eea;
+        font-weight: 600;
+    }
+
+    .links-container a {
         display: block;
-        transition: 3s;
-        margin-left: 85%;
-    }
-
-    a:active {
-        color: #009a82;
-    }
-
-    img {
-        width: 45%;
+        text-decoration: none;
+        font-size: clamp(0.9rem, 2vw, 1.1rem);
+        color: #2d3748;
+        font-family: 'Poppins', sans-serif;
+        padding: 0.6rem 1rem;
+        margin: 0.4rem 0;
+        border-radius: 10px;
+        transition: all 0.3s ease;
         position: relative;
-        bottom: 1.5rem;
-        right: 14rem;
-        float: right;
+        overflow: hidden;
+        font-weight: 400;
+    }
+
+    .links-container a::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.2), transparent);
+        transition: left 0.5s ease;
+    }
+
+    .links-container a:hover::before {
+        left: 100%;
+    }
+
+    .links-container a:hover {
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: #fff;
+        transform: translateX(10px);
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    }
+
+    .links-container a:active {
+        transform: translateX(10px) scale(0.98);
+    }
+
+    .monitor-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: slideUp 0.8s ease-out;
+    }
+
+    .monitor-container img {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4));
     }
 
     iframe {
-        width: 551px;
-        height: 312px;
-        overflow: hidden;
-        border: none;
         position: absolute;
-        right: 260px;
-        margin-top: -6px;
+        width: 68%;
+        height: 48%;
+        top: 8%;
+        left: 16%;
+        border: none;
+        border-radius: 3px;
+        background: #fff;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes slideUp {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 1024px) {
+        .container {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .links-container {
+            max-height: 50vh;
+        }
+
+        iframe {
+            width: 66%;
+            height: 46%;
+            top: 9%;
+            left: 17%;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        body {
+            padding: 1rem;
+        }
+
+        nav p {
+            font-size: 2rem;
+        }
+
+        .contianer {
+            flex-direction: column-reverse;
+        }
+
+        .links-container {
+            padding: 1.5rem;
+            max-height: 40vh;
+        }
+
+        .category h3 {
+            font-size: 1rem;
+        }
+
+        .links-container a {
+            font-size: 0.9rem;
+            padding: 0.5rem 0.8rem;
+        }
+
+        iframe {
+            width: 64%;
+            height: 44%;
+            top: 10%;
+            left: 18%;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        body {
+            padding: 0.5rem;
+        }
+
+        nav {
+            margin-bottom: 1rem;
+        }
+
+        nav p {
+            font-size: 1.5rem;
+        }
+
+        .links-container {
+            padding: 1rem;
+            max-height: 35vh;
+            border-radius: 15px;
+        }
+
+        .category {
+            margin-bottom: 1rem;
+        }
+
+        .category h3 {
+            font-size: 0.9rem;
+        }
+
+        .links-container a {
+            font-size: 0.8rem;
+            padding: 0.4rem 0.6rem;
+            margin: 0.3rem 0;
+        }
+
+        .monitor-container img {
+            max-width: 100%;
+        }
+
+        iframe {
+            width: 62%;
+            height: 42%;
+            top: 11%;
+            left: 19%;
+        }
     }
 </style>
 
 <body>
     <nav>
-        <p>Click on the Links and see output on Monitor</p>
+        <p>✨ Click on Links & See Animations on Monitor ✨</p>
     </nav>
-    <div>
-        <!-- <a href="Anim_on_Scroll.html" target="main">Animation On Scroll</a><br> -->
-        <a href="CSS Extra Works/CSS Animations/bottomRocket.html" target="main">Bottom Rocket Animation</a><br>
-        <a href="CSS Extra Works/CSS Animations/bounce.html" target="main">Bounce Animation</a><br>
-        <a href="CSS Extra Works/CSS Animations/BouncingBall_Spunje.html" target="main">Bouncing Spunje Ball </a><br>
-        <a href="CSS Extra Works/CSS Animations/bouncingBall_wthout Translate.html" target="main">Bouncing Ball
-            1</a><br>
-        <a href="CSS Extra Works/CSS Animations/BouncingBall_Wave.html" target="main">Bouncing Ball with Wave
-            Effect</a><br>
-        <a href="CSS Extra Works/CSS Animations/hipnotize.html" target="main">Hipnotize Animation</a><br>
-        <a href="CSS Extra Works/CSS Animations/imageHover.html" target="main">Image Hover Animation</a><br>
-        <a href="CSS Extra Works/CSS Animations/lineAnimation.html" target="main">Line Animation</a><br>
-        <a href="CSS Extra Works/CSS Animations/lineRocket.html" target="main">Rocket Animation</a><br>
-        <a href="CSS Extra Works/CSS Animations/ripple.html" target="main">Ripple</a><br>
-        <a href="CSS Extra Works/CSS Animations/roundAnimation.html" target="main">Round Animation</a><br>
-        <a href="CSS Extra Works/CSS Animations/roundingRocket.html" target="main">Rounding Rocket</a><br>
-    </div>
-    <div class="monitor" style="position: relative;">
-        <img src="DTP/monitor.png">
-        <iframe src="" name="main"></iframe>
+
+    <div class="container">
+        <div class="links-container">
+            <div class="category">
+                <h3>🚀 Rocket Animations</h3>
+                <a href="CSS Extra Works/CSS Animations/bottomRocket.html" target="main">Bottom Rocket Animation</a>
+                <a href="CSS Extra Works/CSS Animations/lineRocket.html" target="main">Line Rocket Animation</a>
+                <a href="CSS Extra Works/CSS Animations/roundingRocket.html" target="main">Rounding Rocket</a>
+            </div>
+
+            <div class="category">
+                <h3>⚽ Ball Animations</h3>
+                <a href="CSS Extra Works/CSS Animations/bounce.html" target="main">Bounce Animation</a>
+                <a href="CSS Extra Works/CSS Animations/BouncingBall_Spunje.html" target="main">Bouncing Sponge Ball</a>
+                <a href="CSS Extra Works/CSS Animations/bouncingBall_wthout Translate.html" target="main">Bouncing Ball
+                    Classic</a>
+                <a href="CSS Extra Works/CSS Animations/BouncingBall_Wave.html" target="main">Bouncing Ball with
+                    Wave</a>
+                <a href="CSS Animations/bounceBall_(marginChange) .html" target="main">Bounce Ball (Margin Change)</a>
+                <a href="CSS Animations/bouncingBall_1by1.html" target="main">Bouncing Ball 1 by 1</a>
+                <a href="CSS Animations/bouncingBall_Wave.html" target="main">Bouncing Ball Wave Effect</a>
+                <a href="CSS Animations/bouncingBall_Wave_Stop.html" target="main">Bouncing Ball Wave Stop</a>
+                <a href="CSS Animations/bouncingBall_onTable.html" target="main">Bouncing Ball on Table</a>
+            </div>
+
+            <div class="category">
+                <h3>🔄 Circle & Round Animations</h3>
+                <a href="CSS Extra Works/CSS Animations/roundAnimation.html" target="main">Round Animation</a>
+                <a href="CSS Extra Works/CSS Animations/ripple.html" target="main">Ripple Effect</a>
+                <a href="CSS Extra Works/CSS Animations/hipnotize.html" target="main">Hypnotize Animation</a>
+                <a href="CSS Animations/rippleCircle.html" target="main">Ripple Circle</a>
+                <a href="CSS Animations/roundAnimationMy.html" target="main">Round Animation (My Version)</a>
+                <a href="CSS Animations/roundAnimationYT.html" target="main">Round Animation (YT)</a>
+                <a href="CSS Animations/round_Animation.html" target="main">Round Animation Classic</a>
+            </div>
+
+            <div class="category">
+                <h3>📏 Line & Shape Animations</h3>
+                <a href="CSS Extra Works/CSS Animations/lineAnimation.html" target="main">Line Animation</a>
+                <a href="CSS Animations/lineAnimation.html" target="main">Line Animation v2</a>
+                <a href="CSS Animations/boxAnimation.html" target="main">Box Animation</a>
+            </div>
+
+            <div class="category">
+                <h3>🎨 Text & 3D Effects</h3>
+                <a href="CSS Extra Works/CSS Animations/3dtext.html" target="main">3D Text</a>
+                <a href="CSS Animations/3d_text.htm" target="main">3D Text Effect</a>
+                <a href="CSS Animations/textAnimation.html" target="main">Text Animation</a>
+            </div>
+
+            <div class="category">
+                <h3>🖼️ Image & Hover Effects</h3>
+                <a href="CSS Extra Works/CSS Animations/imageHover.html" target="main">Image Hover Animation</a>
+            </div>
+
+            <div class="category">
+                <h3>🎯 Button Animations</h3>
+                <a href="CSS Animations/anim_button.html" target="main">Animated Button</a>
+                <a href="CSS Animations/animated Checkbox.html" target="main">Animated Checkbox</a>
+                <a href="CSS Animations/buttonClick.html" target="main">Button Click Effect</a>
+                <a href="CSS Animations/liquidButtonMy.html" target="main">Liquid Button</a>
+            </div>
+
+            <div class="category">
+                <h3>💧 Water & Liquid Effects</h3>
+                <a href="CSS Animations/waterBody.html" target="main">Water Body Animation</a>
+            </div>
+
+            <div class="category">
+                <h3>🎭 Special Effects</h3>
+                <a href="CSS Extra Works/CSS Animations/Anim_on_Scroll.html" target="main">Animation on Scroll</a>
+                <a href="CSS Animations/Avengers Logo.htm" target="main">Avengers Logo</a>
+            </div>
+        </div>
+
+        <div class="monitor-container">
+            <img src="DTP/monitor.png" alt="Monitor">
+            <iframe src="" name="main" title="Animation Display"></iframe>
+        </div>
     </div>
 </body>
 

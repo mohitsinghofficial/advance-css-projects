@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Line Animation</title>
+</head>
+<style>
+body {
+	margin: 0;
+	padding: 0;
+	background-color: black;
+	color: white;
+}
+.container {
+	height: 80vh;
+	width: 80vw;
+	background-color: #176070;
+	margin-top: 10vh;
+	margin-left: 10vw;
+	opacity: 0%;
+}
+.container:hover {
+	height: 80vh;
+	width: 80vw;
+	background-color: #176070;
+	margin-top: 10vh;
+	margin-left: 10vw;
+	opacity: 0%;
+}
+.container .line {
+	height: 8px;
+	width: 80%;
+	position: relative;
+	top: 48%;
+	left: 10%;
+	background-color: #023C47;
+	/*border-radius: 40%;*/
+}
+.container .line:hover {
+	height: 8px;
+	width: 80%;
+	position: relative;
+	top: 48%;
+	left: 10%;
+	background-color: #023C47;
+	/*border-radius: 40%;*/
+}
+.container .line .move {
+	height: 100%;
+	width: 15%;
+	background-color: #00C0EA;
+	/*border-radius: 40%;*/
+	animation: moving 4s linear infinite;
+}
+@keyframes moving {
+	0% {
+		box-shadow: 0px 0px 8px #0EC6E7;
+		margin-left: 0%;
+	}
+	20% {
+		box-shadow: 0px -80px 8px #0EC6E7;
+	}
+	50% {
+		box-shadow: 0px 200px 8px #0EC6E7;
+	}
+	70% {
+		box-shadow: 0px -80px 8px #0EC6E7;
+	}
+	100% {
+		box-shadow: 2px 0px 5px #0EC6E7;
+		margin-left: 80%;
+	}
+}
+
+</style>
+<body>
+	<div class="container">
+		<div class="line">
+			<div class="move">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

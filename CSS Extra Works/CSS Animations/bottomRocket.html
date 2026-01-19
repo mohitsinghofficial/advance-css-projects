@@ -1,0 +1,350 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>Rocket</title>
+</head>
+<style>
+	body {
+		margin: 0;
+		padding: 0;
+		background-color: black;
+		/* position: fixed; */
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		overflow: hidden;
+	}
+	ul {
+		position: relative;
+		top: -2vh;
+		left: -4vw;
+		height: 100vh;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: flex-end;
+		list-style-type: none;
+		margin-right: -40px;
+		margin-top: -20vh;
+	}
+	ul li {
+		margin: 1px 0;
+		width: 8px;
+		height: 25vh;
+		border-radius: 100% 100% 0% 0%;
+		box-shadow: 10px 0 40px rgb(255, 0, 136);
+		animation: animate 5s infinite alternate;
+	}
+	@keyframes animate {
+		0% {height: 25;}
+		20% {height: 35vh;}
+		40% {height: 50vh;}
+		60% {height: 55vh;}
+		80% {height: 66vh;}
+		100% {height: 70vh;}
+	}
+	ul li:nth-child(1) {
+		background-color: #ff0000;
+		animation-delay: 0ms;
+	}
+	ul li:nth-child(2) {
+		background-color: #ff2200;
+		animation-delay: 300ms;
+	}
+	ul li:nth-child(3) {
+		background-color: #ff3700;
+		animation-delay: 600ms;
+	}
+	ul li:nth-child(4) {
+		background-color: #ff8800;
+		animation-delay: 900ms;
+	}
+	ul li:nth-child(5) {
+		background-color: #ffae00;
+		animation-delay: 1200ms;
+	}
+	ul li:nth-child(6) {
+		background-color: #ffc400;
+		animation-delay: 1500ms;
+	}
+	ul li:nth-child(7) {
+		background-color: #fff200;
+		animation-delay: 1800ms;
+	}
+	ul li:nth-child(8) {
+		background-color: #e5ff00;
+		animation-delay: 2100ms;
+	}
+	ul li:nth-child(9) {
+		background-color: #eaff00;
+		animation-delay: 2400ms;
+	}
+	ul li:nth-child(10) {
+		background-color: #ccff00;
+		animation-delay: 2700ms;
+	}
+	ul li:nth-child(11) {
+		background-color: #a6ff00;
+		animation-delay: 3000ms;
+	}
+	ul li:nth-child(12) {
+		background-color: #59ff00;
+		animation-delay: 3300ms;
+	}
+	ul li:nth-child(13) {
+		background-color: #59ff00;
+		animation-delay: 3600ms;
+	}
+	ul li:nth-child(14) {
+		background-color: #3cff00;
+		animation-delay: 3900ms;
+	}
+	ul li:nth-child(15) {
+		background-color: #15ff00;
+		animation-delay: 4200ms;
+	}
+	ul li:nth-child(16) {
+		background-color: #00ff59;
+		animation-delay: 4500ms;
+	}
+	ul li:nth-child(17) {
+		background-color: #00ff91;
+		animation-delay: 4800ms;
+	}
+	ul li:nth-child(18) {
+		background-color: #00ffc8;
+		animation-delay: 5100ms;
+	}
+	ul li:nth-child(19) {
+		background-color: #00eeff;
+		animation-delay: 5400ms;
+	}
+	ul li:nth-child(20) {
+		background-color: #00f2ff;
+		animation-delay: 5700ms;
+	}
+	ul li:nth-child(21) {
+		background-color: #00e5ff;
+		animation-delay: 6000ms;
+	}
+	ul li:nth-child(22) {
+		background-color: #00b7ff;
+		animation-delay: 6300ms;
+	}
+	ul li:nth-child(23) {
+		background-color: #00b3ff;
+		animation-delay: 6600ms;
+	}
+	ul li:nth-child(24) {
+		background-color: #0077ff;
+		animation-delay: 6900ms;
+	}
+	ul li:nth-child(25) {
+		background-color: #006aff;
+		animation-delay: 7200ms;
+	}
+	ul li:nth-child(26) {
+		background-color: #0059ff;
+		animation-delay: 7500ms;
+	}
+	ul li:nth-child(27) {
+		background-color: #0044ff;
+		animation-delay: 7800ms;
+	}
+	ul li:nth-child(28) {
+		background-color: #0008ff;
+		animation-delay: 8100ms;
+	}
+	ul li:nth-child(29) {
+		background-color: #1500ff;
+		animation-delay: 8400ms;
+	}
+	ul li:nth-child(30) {
+		background-color: #6600ff;
+		animation-delay: 8700ms;
+	}
+	ul li:nth-child(31) {
+		background-color: #9500ff;
+		animation-delay: 9000ms;
+	}
+	ul li:nth-child(32) {
+		background-color: #c300ff;
+		animation-delay: 9300ms;
+	}
+	ul li:nth-child(33) {
+		background-color: #e100ff;
+		animation-delay: 9600ms;
+	}
+	ul li:nth-child(34) {
+		background-color: #ea00ff;
+		animation-delay: 9900ms;
+	}
+	ul li:nth-child(35) {
+		background-color: #ff00cc;
+		animation-delay: 10200ms;
+	}
+	ul li:nth-child(36) {
+		background-color: #ff008c;
+		animation-delay: 10500ms;
+	}
+	ul li:nth-child(37) {
+		background-color: #ff0077;
+		animation-delay: 10800ms;
+	}
+	ul li:nth-child(38) {
+		background-color: #ff0026;
+		animation-delay: 11200ms;
+	}
+	ul li:nth-child(39) {
+		background-color: #ff0008;
+		animation-delay: 11500ms;
+	}
+	ul li:nth-child(40) {
+		background-color: #e60202;
+		animation-delay: 11800ms;
+	}
+	ul li:nth-child(41) {
+		background-color: #d20303;
+		animation-delay: 12100ms;
+	}
+	ul li:nth-child(42) {
+		background-color: #b40000;
+		animation-delay: 12400ms;
+	}
+</style>
+<body>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	lorem500
+</body>
+</html>

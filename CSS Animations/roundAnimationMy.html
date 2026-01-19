@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Round Animation My</title>
+</head>
+<style>
+    body {
+        background-color: black;
+        background-size: 100% 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    .main {
+        position: relative;
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        animation: rotate 900ms linear infinite;
+        /* box-shadow: 0px 300px 10px darkblue; */
+    }
+    .main::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        background-image: linear-gradient(to bottom, rgb(0, 123, 255), transparent);
+        border-top-right-radius: 200px;
+        border-bottom-right-radius: 200px;
+        z-index: 2;
+    }
+    .main::before {
+        content: "";
+        position: absolute;
+        top: -1px;
+        left: 48%;
+        height: 13px;
+        width: 13px;
+        background-color: rgb(0, 204, 255);
+        border-radius: 50%;
+        z-index: 9;
+        box-shadow: 0 0 10px #00ccff,
+                    0 0 20px #00ccff,
+                    0 0 30px #00ccff,
+                    0 0 40px #00ccff,
+                    0 0 50px #00ccff,
+                    0 0 60px #00ccff,
+                    0 0 70px #00ccff,
+                    0 0 80px #00ccff,
+                    0 0 90px #00ccff,
+                    0 0 100px #00ccff;
+    }
+    .main span {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        bottom: 10px;
+        left: 10px;
+        /* background-color: #837783; */
+        background-color: black;
+        border-radius: 50%;
+        z-index: 5;
+    }
+    @keyframes rotate {
+        from { transform: rotate(360deg)}
+    }
+    h1{
+        color: white;
+        font-family: poppins;
+        position: absolute;
+        text-shadow: 0 10px 5px #000;
+        animation: text1 6s inline infinite;
+    }
+    @keyframes text1 {
+        from {
+            top: 500px;
+            left: 100px;
+        }
+        to {
+            transform: translateX(360deg);
+            top: -300px;
+        }
+    }
+</style>
+<body>
+    <div class="main"><span></span></div>
+</body>
+</html>

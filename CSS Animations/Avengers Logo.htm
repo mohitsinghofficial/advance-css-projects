@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avangers</title>
+</head>
+<style>
+    html {
+        font-size: 62.5%;
+        font-family: poppins;
+    }
+    body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #000;
+    }
+    div {
+        position: relative;
+        /* border: 1px solid #fff; */
+        width: 40vw;
+        height: 80vh;
+        left: -10%;
+        display: grid;
+        place-items: center;
+    }
+    span {
+        display: inline-block;
+        position: absolute;
+        background-color: #fff;
+    }
+    span:first-child {
+        width: 8%;
+        height: 50%;
+        top: 10%;
+        left: 60%;
+    }
+    span:nth-child(2) {
+        width: 8%;
+        height: 58%;
+        top: 10%;
+        left: 42%;
+        transform: skewX(-28deg);
+    }
+    span:last-child {
+        position: relative;
+        width: 35%;
+        height: 6%;
+        right: 7.6%;
+        bottom: 5%;
+        background-color: grey;
+    }
+    span:last-child::before {
+        content: "";
+        position: absolute;
+        top: -40%;
+        left: 100%;
+        border-top: 4rem solid transparent;
+        border-left: 4rem solid grey;
+        border-right: 4rem solid transparent;
+        border-bottom: 4rem solid transparent;
+        /* box-shadow: 0 0 1rem grey; */
+    }
+    h1 {
+        margin-top: -20rem;
+        color: #fff;
+        font-size: 10rem;
+        animation: textAnim 3s infinite alternate;
+        text-shadow: 0 10rem 1rem blue;
+    }
+    @keyframes textAnim {
+        0% {
+            transform: none;
+        }
+        /* 50% {
+            transform: rotateX(360deg);
+        } */
+        100% {
+            transform: rotateY(180deg);
+        }
+    }
+</style>
+<body>
+    <div>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <h1>Avangers</h1>
+</body>
+</html>

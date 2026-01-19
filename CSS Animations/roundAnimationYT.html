@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Round Animation</title>
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    .loader {
+        position: relative;
+        height: 400px;
+        width: 400px;
+        border-radius: 50%;
+        animation: rotate 6s linear infinite;
+    }
+    .loader::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 50%;
+        background-image: linear-gradient(to top, transparent, blue);
+        background-size: 200px 360px;
+        background-repeat: no-repeat;
+        border-top-left-radius: 200px;
+        border-bottom-left-radius: 200px;
+    }
+    .loader::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 10px;
+        height: 10px;
+        background: #00fff9;
+        border-radius: 50%;
+        z-index: 10;
+        box-shadow: 0 0 10px #00fff9,
+                    0 0 20px #00fff9,
+                    0 0 30px #00fff9,
+                    0 0 40px #00fff9,
+                    0 0 50px #00fff9,
+                    0 0 60px #00fff9,
+                    0 0 70px #00fff9,
+                    0 0 80px #00fff9,
+                    0 0 90px #00fff9,
+                    0 0 100px #00fff9;
+    }
+    span {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        bottom: 10px;
+        left: 10px;
+        background: #182357;
+        /* background: black; */
+        border-radius: 50%;
+    }
+    @keyframes rotate {
+        from {transform: rotate(0deg)}
+        to {transform: rotate(360deg)}
+    }
+
+</style>
+<body bgcolor="black">
+    <div class="loader"><span></span></div>
+</body>
+</html>

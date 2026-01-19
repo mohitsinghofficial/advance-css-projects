@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Line to Responsive</title>
+</head>
+<style>
+    body {
+        min-heigth: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    h2::selection {
+        background-color: yellow;
+    }
+    .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 80vw;
+        height: 80vh;
+        justify-content: space-around;        
+        background-color: #fff;
+    }
+    div {
+        height: 200px;
+        margin: 20px 20px;
+        flex-wrap: wrap;
+        flex: 1 1 300px;
+    }
+    div:first-child {
+        background-color: red;
+    }
+    .container div:nth-child(2) {
+        background-color: yellow;
+    }
+    div:last-child {
+        background-color: blue;
+    }
+</style>
+<body>
+    <h2>One life of Code to make site Responsive</h2>
+    <div class="container">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>    
+</body>
+</html>

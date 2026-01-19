@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Rounding Rocket</title>
+</head>
+<style>
+	body {
+		background-color: #041E30;
+		overflow: hidden;
+	}
+	.container {
+		z-index: 3;
+		position: relative;
+		top: 20vh;
+		left: 30vw;
+		height: 100vh;
+		width: 400px;
+		animation: rotate 1s linear infinite;
+		/*background-color: yellow;
+		border-radius: 50%;*/
+	}
+	.container::before {
+		content: "";
+		position: absolute;
+		background-image: linear-gradient(to top, transparent, #1088DB);
+		width: 200px;
+		height: 200px;
+		left: 50%;
+		border-top-right-radius: 100%;
+		z-index: 2;
+	}
+	.container::after {
+		content: "";
+		position: absolute;
+		background-color: #00F0FF;
+		right: 49%;
+		top: -3px;
+		height: 17px;
+		width: 17px;
+		border-radius: 50%;
+		z-index: 10;
+		box-shadow: 0px 0px 20px #00FFF6;
+	}
+	@keyframes rotate {
+		from {transform: rotate(0deg)}
+		to {transform: rotate(-360deg)}
+	}
+	.center {
+		position: relative;
+		top: 1.5vh;
+		left: 1vw;
+		z-index: 5;
+		height: 380px;
+		width: 380px;
+		border-radius: 50%;
+		background-color: #041E30;
+	}
+</style>
+<body>
+	<div class="container">
+		<div class="center"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+</head>
+<style>
+    * {
+        position: relative;
+    }
+    body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #7f9ead;
+        font-family: poppins;
+    }
+    .card {
+        height: 250px;
+        width: 400px;
+        padding: 20px 30px;
+        border-radius: 3%;
+        background-color: #fff;
+        background-size: cover;
+        box-shadow: 0px 2px 20px rgba(0,0,0,0.3);
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    .card .image img {
+        width: 24vw;
+        left: 5%;
+        top: -50px;
+        border-radius: 3%;
+        box-shadow: 0px 2px 20px rgba(0,0,0,0.3);
+        z-index: 9;
+    }
+    .card .content {
+        text-align: center;
+        transform: translateY(-700px);
+        transition: 0.3s;
+        opacity: 0;
+    }
+    .card .content p {
+        bottom: 20px
+    }
+    .card:hover {
+        height: 400px;
+    }
+    .card:hover > .content{
+        opacity: 1;
+        transform: translateY(-55px);
+    }
+</style>
+<body>
+    <div class="card">
+        <div class="image">
+            <img src="images/168083.jpg">
+        </div>
+        <div class="content">
+            <h1>Hello World</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum aut saepe porro doloremque, sapiente facere recusandae dolorum voluptatum dolorem quam veritatis enim repudiandae vero quia iure architecto. Maxime, accusamus illo!</p>
+        </div>
+    </div>
+</body>
+</html>

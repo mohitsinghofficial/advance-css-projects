@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing Bg Effec</title>
+</head>
+<style>
+    body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        transition: 300ms;
+        animation: changeBg 9s linear infinite;
+        font-family: poppins;
+        color: black;
+        font-weight: bolder;
+        font-size: 3em;
+    }
+    @keyframes changeBg {
+        0% {background-color: white;}
+        20% {background-color: green;}
+        40% {background-color: red;}
+        60% {background-color: blue;color: white;}
+        80% {background-color: pink;}
+        100% {background-color: white;}
+    }
+</style>
+<body>
+    Welcome on the Stage of HindiRupee Ltd.
+</body>
+</html>

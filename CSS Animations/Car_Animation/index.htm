@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="car.png">
+    <title>Moving Car</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    img {
+        position: absolute;
+    }
+    img:nth-child(1) {
+        image-resolution: 10000px 10000px;
+        width: 3000px;
+        height: 100%;
+    }
+    img:nth-child(2) {
+        top: 20vh;
+        position: stretch;
+        width: 3000px;
+        height: 60vh;
+    }
+    img:nth-child(3) {
+        top: 80vh;
+        position: stretch;
+        height: 20vh;
+        width: 3000px;
+    }
+    img:nth-child(4) {
+        position: fixed;
+        filter: drop-shadow(0 0 5px rgba(0,0,0,0.4));
+        bottom: 8vh;
+        left: 40vw;
+        width: 20vw;
+    }
+    img:nth-child(5) {
+        position: fixed;
+        top: 84vh;
+        width: 3.5vw;
+        left: 41.8vw;
+    }
+    img:nth-child(6) {
+        position: fixed;
+        top: 84vh;
+        width: 3.5vw;
+        left: 54vw;
+    }
+    .wheel {
+        position: fixed;
+        animation: rotate 5s linear infinite;
+    }
+    @keyframes rotate {
+        from {transform: rotate(0deg)}
+        to {transform: rotate(700deg)}
+    }
+    .back {
+        animation: moving 5s  linear infinite;
+    }
+    @keyframes moving {
+        from {transform: translateX(0px);}
+        to {transform: translateX(-1000px);}
+    }
+</style>
+<body>
+    <img class="back" src="sky.jpg">
+    <img class="back" src="city.png">
+    <img class="back" src="road.jpg">
+    <img src="car.png">
+    <img class="wheel" src="wheel.png">
+    <img class="wheel" src="wheel.png">
+</body>
+</html>

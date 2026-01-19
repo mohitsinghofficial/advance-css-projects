@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pie Chart using CSS</title>
+</head>
+<style>
+    body {
+        font-family: poppins;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background-color: rgb(201, 220, 255);
+    }
+    .center_div {
+        min-height: calc(100vh - 60vh);
+        min-width: calc(100vw - 60vw);
+        padding: 20px;
+        background-color: rgb(147, 214, 255);
+        border: 2px solid grey;
+        box-shadow: 0 6vh 80px rgba(0,0,0,0.2);
+    }
+    .center_div p {
+        position: relative;
+        top: 18vh;
+        text-align: right;
+    }
+    .center_div span::after {
+        content: "";
+        display: inline-block;
+        width: 0.6rem;
+        height: 0.6rem;
+        border-radius: 50%;
+        background-color: currentColor;
+        font-weight: 700;
+        margin: 0 10px;
+    }
+    .center_div h3 {
+        position: relative;
+        top: 12vh;
+    }
+    .center_div .pie-chart {
+        background: radial-gradient(circle closest-side, red 100%, blue);
+    }
+</style>
+<body>
+    <div class="center_div">
+        <h2>Creating Pie Chart using Pure CSS</h2>
+        <div class="pie-chart"></div>
+        <p>
+            First <span style="color: #ee5253"></span><br />
+            Second <span style="color: #f28e2c"></span><br />
+            Third <span style="color: #f368e0"></span><br />
+            Fourth <span style="color: #0abde3"></span><br />
+            Five <span style="color: #10a384"></span><br />
+        </p>
+        <h3>How this looking ?</h3>
+    </div>
+</body>
+</html>

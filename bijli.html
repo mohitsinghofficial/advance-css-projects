@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bijli Text</title>
+</head>
+<style>
+    html {
+        font-size: 62.5%;
+    }
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: #000;
+        overflow: hidden;
+    }
+    span {
+        position: relative;
+        text-transform: uppercase;
+        margin: 0 2rem;
+        font-family: Adobe Gothic Std B;
+        font-size: 20rem;
+        color: #00ffff;
+        animation: light 1.3s linear infinite;
+    }
+    @keyframes light {
+        0% {
+            color: #00ffff;
+            text-shadow: none;
+        }
+        80% {
+            color: #00ffff;
+            text-shadow: none;
+        }
+        100% {
+            color: #ff002b;
+            text-shadow: 0 0 1rem rgb(194, 0, 0), 0 0 10rem rgb(188, 0, 0);
+        }
+    }
+    span:nth-child(1) {
+        animation-delay: 0s;
+    }
+    span:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+    span:nth-child(3) {
+        animation-delay: 0.4s;
+    }
+    span:nth-child(4) {
+        animation-delay: 0.6s;
+    }
+    span:nth-child(5) {
+        animation-delay: 0.8s;
+    }
+</style>
+<body>
+        <span>l</span>
+        <span>i</span>
+        <span>g</span>
+        <span>h</span>
+        <span>t</span>
+</body>
+</html>

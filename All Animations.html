@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Animations by Mohit Singh</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 2rem;
+        background-color: #fff;
+        width: 100vw;
+        height: 100vh;
+        font-family: candara;
+        overflow: hidden;
+    }
+
+    nav {
+        display: grid;
+        place-items: center;
+        font-size: 3rem;
+        position: relative;
+        top: -20px;
+        font-weight: 700;
+    }
+
+    div {
+        width: auto;
+        height: auto;
+        background-color: #fff;
+        border: 5px solid #000;
+        border-radius: 1rem;
+        float: left;
+        padding: 1rem 2rem;
+        position: relative;
+        left: 8rem;
+        top: -20px;
+    }
+
+    div a {
+        text-decoration: none;
+        font-size: 26px;
+        color: rgb(0, 66, 75);
+        font-family: Ebrima;
+        overflow: hidden;
+    }
+
+    div a::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: .5%;
+        left: 4%;
+        margin-top: 8%;
+        background-color: #3b4c4d;
+    }
+
+    div a:hover::after {
+        transition: 3s;
+        width: 90%;
+    }
+
+    div a::before {
+        content: "";
+        position: absolute;
+        width: 2%;
+        height: 5.6%;
+        margin-top: 2%;
+        margin-left: -4%;
+        background-color: #3b4c4d;
+        /* transform: skewX(-20deg); */
+        /* display: none; */
+    }
+
+    div a:hover::before {
+        display: block;
+        transition: 3s;
+        margin-left: 85%;
+    }
+
+    a:active {
+        color: #009a82;
+    }
+
+    img {
+        width: 45%;
+        position: relative;
+        bottom: 1.5rem;
+        right: 14rem;
+        float: right;
+    }
+
+    iframe {
+        width: 551px;
+        height: 312px;
+        overflow: hidden;
+        border: none;
+        position: absolute;
+        right: 260px;
+        margin-top: -6px;
+    }
+</style>
+
+<body>
+    <nav>
+        <p>Click on the Links and see output on Monitor</p>
+    </nav>
+    <div>
+        <!-- <a href="Anim_on_Scroll.html" target="main">Animation On Scroll</a><br> -->
+        <a href="CSS Extra Works/CSS Animations/bottomRocket.html" target="main">Bottom Rocket Animation</a><br>
+        <a href="CSS Extra Works/CSS Animations/bounce.html" target="main">Bounce Animation</a><br>
+        <a href="CSS Extra Works/CSS Animations/BouncingBall_Spunje.html" target="main">Bouncing Spunje Ball </a><br>
+        <a href="CSS Extra Works/CSS Animations/bouncingBall_wthout Translate.html" target="main">Bouncing Ball
+            1</a><br>
+        <a href="CSS Extra Works/CSS Animations/BouncingBall_Wave.html" target="main">Bouncing Ball with Wave
+            Effect</a><br>
+        <a href="CSS Extra Works/CSS Animations/hipnotize.html" target="main">Hipnotize Animation</a><br>
+        <a href="CSS Extra Works/CSS Animations/imageHover.html" target="main">Image Hover Animation</a><br>
+        <a href="CSS Extra Works/CSS Animations/lineAnimation.html" target="main">Line Animation</a><br>
+        <a href="CSS Extra Works/CSS Animations/lineRocket.html" target="main">Rocket Animation</a><br>
+        <a href="CSS Extra Works/CSS Animations/ripple.html" target="main">Ripple</a><br>
+        <a href="CSS Extra Works/CSS Animations/roundAnimation.html" target="main">Round Animation</a><br>
+        <a href="CSS Extra Works/CSS Animations/roundingRocket.html" target="main">Rounding Rocket</a><br>
+    </div>
+    <div class="monitor" style="position: relative;">
+        <img src="DTP/monitor.png">
+        <iframe src="" name="main"></iframe>
+    </div>
+</body>
+
+</html>

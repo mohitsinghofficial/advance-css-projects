@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Logo</title>
+</head>
+<style>
+    html {
+        font-size: 62.5%;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background-color: #34495e;
+    }
+    div {
+        width: 30vh;
+        height: 30vh;
+        border-radius: 2rem;
+        background-color: #ff6600;
+        display: flex;
+        align-items: flex-start;
+        transform: rotate(-45deg);
+    }
+    div:hover {
+        transition: all .5s linear;
+        transform: rotate(315deg);
+    }
+    span {
+        position: relative;
+        width: 3vh;
+        height: 20vh;
+        background-color: #fff;
+    }
+    span:first-child {
+        height: 20vh;
+        left: 70%;
+        top: -.1rem;
+    }
+    span:last-child {
+        height: 15vh;
+        transform: rotate(45deg);
+        left: 42%;
+        top: 20%;
+        position: relative;
+    }
+    span:last-child::before {
+        content: "";
+        position: absolute;
+        width: 200%;
+        height: 40%;
+        border-radius: 50%;
+        background-color: #fff;
+        top: 80%;
+        transform: translateX(-28%);
+    }
+    span:first-child::before {
+        content: "";
+        position: absolute;
+        width: 200%;
+        height: 30%;
+        border-radius: 50%;
+        background-color: #fff;
+        top: 80%;
+        transform: translateX(-28%);
+    }
+    span:first-child::after {
+        content: "";
+        position: absolute;
+        width: 200%;
+        height: 30%;
+        border-radius: 50%;
+        background-color: #fff;
+        top: 30%;
+        transform: translateX(-33%);
+    }
+</style>
+<body>
+    <div>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+</html>

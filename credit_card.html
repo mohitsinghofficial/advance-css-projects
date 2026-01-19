@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap');
+    body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: 'Maven Pro', sans-serif;
+    }
+    .card {
+        color: white;
+        width: 35vw;
+        height: 40vh;
+        border-radius: 25px;
+        padding: 30px;
+        box-sizing: border-box;
+        background: linear-gradient(to right top , rgba(0,212,255,1), rgba(9,9,121,1));
+    }
+    .card::content {
+        z-index: 10;
+    }
+    .card::before {
+        content: "";
+        position: absolute;
+        width: 35vw;
+        height: 40vh;
+        border-radius: 25px;
+        background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+        /* z-index: 1; */
+        top: 31%;
+        left: 32.5%;
+        clip-path: polygon(20% 0%, 100% 0, 100% 100%, 74% 78%, 70% 50%, 37% 47%, 34% 18%, 0 0);
+    }
+    .card h1{
+        position: absolute;
+        top: 30%;
+        left: 55%;
+        font-size: 4em;
+    }
+    .card h2:first-child{
+        position: relative;
+        font-size: 2em;
+    }
+    .card h2:nth-child(2) {
+        font-size: 2em;
+        position: relative;
+        top: 120px;
+        color: #dfe6e9;
+    }
+    .card p {
+        position: relative;
+        top: 90px;
+        font-size: 1.8em;
+    }
+</style>
+<body>
+    <div class="card">
+        <h1>VISA</h1>
+        <div class="left">
+            <h2>Credit</h2>
+            <h2>Mohit Singh</h2>
+            <p>3060 - 3693 - 7896 - 9639 - 3439</p>
+        </div>
+    </div>
+</body>
+</html>

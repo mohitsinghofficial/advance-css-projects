@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envelope Effect</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        font-family: poppins;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background-color: #cdf0ff;
+    }
+    a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+        padding: 10px 20px;
+        font-size: 4em;
+        background-color: #0095ff;
+        position: relative;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        z-index: 10;
+    }
+    a:before {
+        content: "ENVELOPE";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        display: grid;
+        place-items: center;
+        background-color: green;
+        transition: all 0.3s;
+        transform: rotateX(0deg);
+        transform-origin: top;
+        /* clip-path: polygon(50% 50%, 100% 100%, 0% 100%); */
+    }
+    a:after {
+        content: "ENVELOPE";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        display: grid;
+        place-items: center;
+        background-color: rgb(14, 0, 210);
+        transition: all 0.8s;
+        transform: rotateX(0deg);
+        transform-origin: bottom;
+    }
+    a:hover::before {
+        transform: rotateX(180deg);
+    }
+    a:hover::after {
+        transform: rotateX(180deg);
+    }
+</style>
+<body>
+    <h2>Hover on Envelope to see Effect</h2>
+    <a href="">technology </a>
+</body>
+</html>

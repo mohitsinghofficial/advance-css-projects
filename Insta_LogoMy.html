@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Logo</title>
+</head>
+<style>
+    html {
+        font-size: 62.5%;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+    .main {
+        position: relative;
+        width: 30vw;
+        height: 30vw;
+        border-radius: 8rem;
+        background-image: linear-gradient(to bottom left, #5949DD, #D617CC, #E92150, #F9934B, #FEC04F);
+        display: grid;
+        place-items: center;
+    }
+    .main .child {
+        position: absolute;
+        width: 60%;
+        height: 60%;
+        border-radius: 8rem;
+        border: 2rem solid #fff;
+        display: grid;
+        place-items: center;
+    }
+    .main .child .center {
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        border-radius: 50%;
+        border: 2rem solid #fff;
+    }
+</style>
+<body>
+    <div class="main">
+        <div class="child">
+            <div class="center"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+//  What super - powers gives
+// 1. Operators
+// 2. Variables
+// 3. Nesting
+// 4. Mixin
+// 5. Parameters
+// 6. Partials
+
+html {
+    font-size: 62.5%;
+}
+@mixin flexProp {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+body {
+    min-height: 100vh;
+    @include floxProp;
+    display: flex;
+}
+$bg_color: #ff7733;
+
+div {
+    height: 400px;
+    width: 400px;
+    background-color: $bg_color;
+    &:hover {
+        transition: 500ms;
+        background-color: red;
+    }
+}

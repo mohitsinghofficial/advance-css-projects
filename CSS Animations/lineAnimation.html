@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LineAnimation</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+    }
+
+    .main {
+        height: 80vh;
+        width: 80vw;
+        background-color: #1a2028;
+        /* box-shadow: 0px 0px 50px 0px rgb(0, 106, 255); */
+        margin-top: 10vh;
+        margin-left: 10vw;
+    }
+
+    .main>.line {
+        height: 0.6vh;
+        width: 80%;
+        background-color: #000212;
+        position: relative;
+        top: 38vh;
+        left: 10%;
+        z-index: 9;
+    }
+
+    .ant {
+        position: relative;
+        height: 100%;
+        width: 20%;
+        background-color: #005be3;
+        box-shadow: 0px 0px 10px #09146b;
+        animation: move 4s linear infinite;
+    }
+
+    @keyframes move {
+        0% {
+            margin-left: 80%;
+        }
+
+        100% {
+            margin-right: 100%;
+        }
+    }
+</style>
+
+<body>
+    <div class="main">
+        <div class="line">
+            <div class="ant"></div>
+        </div>
+    </div>
+</body>
+
+</html>

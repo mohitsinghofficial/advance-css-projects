@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode</title>
+</head>
+<style>
+    html {
+        font-size: 62.5%;
+        font-family: poppins;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background-color: aliceblue;
+    }
+    div {
+        text-align: center;
+    }
+    div h2 {
+        color: darkblue;
+        font-size: 5rem;
+    }
+    div p {
+        font-size: 3rem;
+    }
+    @media (prefers-color-scheme: dark) {
+        body {
+            background-color: #111;
+        }
+        div h2 {
+            color: aqua;
+        }
+        div p{
+            color: white;
+        }
+    }
+</style>
+<body>
+    <div>
+        <h2>Dark Mode</h2>
+        <p>Switch your Browser "Theme" to see the Effect</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Hover Iffect</title>
+</head>
+<style>
+    html {
+        font-size: 62.5%;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: poppins;
+        color: #fff;
+        background-color: #6d6d87;
+    }
+    :root {
+        --trans: all 0.3s linear;
+    }
+    .container {
+        position: relative;
+        width: 24vw;
+        height: 70vh;
+        background-color: red;
+        box-shadow: 0 5rem 8rem rgba(0,0,0,0.5);
+        overflow: hidden;
+    }
+    .container img {
+        width: 100%;
+        height: 100%;
+        transition: var(--trans);
+    }
+    .container .content {
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.6rem;
+        transition: var(--trans);
+        text-shadow: 0 0 0.5rem rgba(0,0,0,0.9);
+    }
+    .container .content h2 {
+        text-transform: uppercase;
+    }
+    .container .content p {
+        position: absolute;
+        top: 40%;
+        text-transform: capitalize;
+    }
+    .container img:hover {
+        transform: scale(1.3) rotate(12deg);
+    }
+    .container:hover .content {
+        top: 40%;
+    }
+    @media (max-width: 800px){
+    .container {
+        width: 70vw;
+        height: 70vh;
+    }
+    .container img:hover {
+    transform: scale(1.3) rotate(10deg);
+    }
+    }
+</style>
+<body>
+    <div class="container">
+            <img src="images/168133.jpg">
+        <div class="content">
+            <h2>Welcome on This Stage</h2>
+            <p>thanks for visiting💕💕</p>
+        </div>
+    </div>
+</body>
+</html>

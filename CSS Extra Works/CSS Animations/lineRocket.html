@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Line Rocket</title>
+</head>
+<style>
+body {
+	/*background: url(designes/technology.jpg) no-repeat;*/
+	background-color: black;
+	min-width: 100vw;
+	background-size: 100vw 100vh;
+	overflow: hidden;
+}
+ul {
+	position: relative;
+	top: 2vh;
+	right: -50vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/*border: 2px solid white;*/
+	list-style-type: none;
+}
+li {
+	margin-top: 2vh;
+	margin-bottom: 2vh;
+	height: 2vh;
+	width: 20vw;
+	background-image: linear-gradient(to right, #00F6FF, #06A3A9, transparent);
+	animation: rocket 10s linear infinite;
+	margin-left: 46vw;
+	transform-origin: translateX;
+}
+@keyframes rocket {
+	0% {
+		/*box-shadow: 0px 0px 5px #00AEFF;*/
+		transform: none;
+	}
+	49% {
+		border-radius: none;
+	}
+	50% {
+		/*box-shadow: 0px 70px 5px #00AEFF;*/
+		border-top-right-radius: 100%;
+		border-bottom-right-radius: 100%;
+	}
+	100% {
+		/*box-shadow: 0px -70px 20px #00AEFF; */
+		transform: translateX(-200vw);
+	}
+}
+li:nth-child(2){
+	animation-delay: 1s;
+}
+li:nth-child(3){
+	width: 25vw;
+	animation-delay: 2s;
+}
+li:nth-child(4){
+	width: 10vw;
+	animation-delay: 1.5s;
+}
+li:nth-child(5){
+	animation-delay: 3s;
+}
+li:nth-child(6){
+	width: 80vw;
+	animation-delay: 4s;
+}
+li:nth-child(7){
+	animation-delay: 3.5s;
+}
+li:nth-child(8){
+	width: 29vw;
+	animation-delay: 2.2s;
+}
+li:nth-child(9){
+	width: 90vw;
+	animation-delay: 4s;
+}
+li:nth-child(10){
+	width: 50vw;
+	animation-delay: 4.1s;
+}
+li:nth-child(11){
+	animation-delay: 1.4s;
+}
+li:nth-child(12){
+	animation-delay: 500ms;
+}
+li:nth-child(13){
+	width: 100vw;
+	animation-delay: 1200ms;
+}
+li:nth-child(14){
+	animation-delay: 1.9s;
+}
+li:nth-child(15){
+	animation-delay: 2.5s;
+}
+div {
+	position: relative;
+	height: 3vh;
+	width: 3vh;
+	border-radius: 50%;
+	background-color: #00FFCC;
+	left: -0.5%;
+	box-shadow: 0px 0px 10px #00AEFF;
+
+}
+div:nth-child(1) {
+	top: -4px;
+}
+</style>
+<body>
+	<ul>
+		<li><div></div></li>
+		<li><div></div></li>
+		<li><div></div></li>
+		<li><div></div></li>
+		<li><div></div></li>
+		<li><div></div></li>
+		<li><div></div></li>
+		<li><div></div></li>
+		<li><div></div></li>
+		<li><div></div></li>
+		<li><div></div></li>
+		<li><div></div></li>
+		<li><div></div></li>
+		<li><div></div></li>
+		<li><div></div></li>
+	</ul>
+</body>
+</html>

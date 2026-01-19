@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnePixel</title>
+</head>
+<style>
+    body {
+        display: grid;
+        place-items: center;
+    }
+    .container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        align-items: left;
+        justify-content: center;
+    }
+    .container .ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .container .ul .li {
+        width: 1px;
+        height: 1px;
+    }
+    .container .ul .li:first-child {
+        background-color: red;
+    }
+    .container .ul .li:nth-child(2) {
+        background-color: #ff00f2;
+    }
+    .container .ul .li:nth-child(3) {
+        background-color: yellow;
+    }
+    .container .ul .li:nth-child(4) {
+        background-color: blue;
+    }
+    .container .ul .li:nth-child(5) {
+        background-color: aqua;
+    }
+    .container .ul .li:nth-child(6) {
+        background-color: skyblue;
+    }
+    .container .ul .li:nth-child(7) {
+        background-color: white;
+    }
+</style>
+<body>
+    <div class="container">
+        <ul class="1st">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <ul class="1st">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>

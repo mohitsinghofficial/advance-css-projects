@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Body</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+    }
+    .main {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        background-color: #00aaff;
+    }
+    .main::before,
+    .main::after {
+        content: "";
+        position: absolute;
+        top: -70%;
+        left: 50%;
+        width: 200%;
+        height: 400%;
+        transform: translate(-50%, -75%);
+    }
+    .main::before {
+        border-radius: 95%;
+        background-color: #232323;
+        animation: rotate 5s linear infinite;
+    }
+    .main::after {
+        border-radius: 45%;
+        background-color: rgba(35, 35, 35, 0.5);
+        /* background-color: red; */
+        animation: rotate 5s linear infinite;
+    }
+    @keyframes rotate {
+        0% {transform: translate(-50%, -75%) rotate(0dewg)}
+        100% {transform: translate(-50%, -75%) rotate(360deg)}
+    }
+</style>
+<body>
+    <div class="main"></div>
+</body>
+</html>

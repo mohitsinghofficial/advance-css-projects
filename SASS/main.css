@@ -1,0 +1,17 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+}   
+
+div {
+  height: 400px;
+  width: 400px;
+  background-color: #ff7733;
+}
+div:hover {
+  transition: 500ms;
+  background-color: red;
+}/*# sourceMappingURL=main.css.map */

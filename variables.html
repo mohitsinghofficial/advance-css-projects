@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+</head>
+<style>
+    :root {
+        --bg_color: lightgrey;
+        --head_color: red;
+        --p_color: black;
+    }
+    div {
+        height: 400px;
+        width: 400px;
+        float: left;
+        margin: 10px 20px;
+        background: var(--bg_color);
+    }
+    div:nth-child(3) {
+        /* --bg_color: blue; */
+        background-color: var(--bg_color);
+    }
+    div h1 {
+        color: var(--head_color);
+    }
+    div h2 {
+        color: var(--head_color);
+    }
+    div h3 {
+        --head_color: green;
+        color: var(--head_color);
+    }
+</style>
+<body bgcolor="">
+    <div>
+        <h1>Hello World</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum inventore quaerat atque, esse vero eum a rerum est molestiae, voluptatem nostrum voluptate explicabo ipsam excepturi fugiat cum aliquid? Cum, quis!</p>
+    </div>
+    <div>
+        <h2>Hello World</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum inventore quaerat atque, esse vero eum a rerum est molestiae, voluptatem nostrum voluptate explicabo ipsam excepturi fugiat cum aliquid? Cum, quis!</p>
+    </div>
+    <div>
+        <h3>Hello World</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum inventore quaerat atque, esse vero eum a rerum est molestiae, voluptatem nostrum voluptate explicabo ipsam excepturi fugiat cum aliquid? Cum, quis!</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading</title>
+</head>
+<style>
+    html {
+        font-size: 62.5%;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background-color: #3a6d89;
+    }
+    div {
+        position: relative;
+        width: 12vw;
+        height: 20vh;
+    }
+    div span {
+        position: absolute;
+        width: 5vw;
+        height: 8vh;
+        top: 0;
+        left: 0;
+        background-color: #00fffb;
+        box-shadow: 0 4rem 6rem rgba(0,0,0,0.3);
+        animation: loading 2s linear infinite;
+    }
+    @keyframes loading {
+        0% {
+            top: 0;
+            left: 0;
+        }
+        12.5% {
+            top: 0;
+            left: 75%;
+        }
+        25% {
+            top: 0;
+            left: 75%;
+        }
+        37.5% {
+            top: 75%;
+            left: 75%;
+        }
+        50% {
+            top: 75%;
+            left: 75%;
+        }
+        62.5% {
+            top: 75%;
+            left: 0;
+        }
+        75% {
+            top: 75%;
+            left: 0;
+        }
+        87.5% {
+            top: 0;
+            left: 0;
+        }
+        100% {
+            top: 0;
+            left: 0;
+        }
+    }
+    span:nth-child(2) {
+        animation-delay: 0.66s;
+    }
+    span:nth-child(3) {
+        animation-delay: 1.32s;
+    }
+</style>
+<body>
+    <div>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+</html>

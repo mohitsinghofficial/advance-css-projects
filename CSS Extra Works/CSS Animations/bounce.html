@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bouncing Ball</title>
+</head>
+<style>
+.container {
+	height: 80vh;
+	width: 80vw;
+	position: relative;
+	top: 10vh;
+	left: 10vw;
+	background-color: #00161B;
+	/*box-shadow: 0px 0px 20px white;*/
+}
+.container .child-container {
+	width: 60%;
+	position: fixed;
+	top: 70%;
+	left: 30%;
+	display: flex;
+	flex-direction: row;
+}
+.container .child-container .bucket {
+	position: relative;
+	bottom: 40vh;
+	height: 50vh;
+	margin-right: 30px;
+	/*border: 1px solid white;*/
+}
+.container .child-container .bucket .ball {
+	position: relative;
+	top: 60%;
+	height: 10vh;
+	width: 6vw;
+	border-radius: 50%;
+	background-image: linear-gradient(to top, #111, #0093DD);
+}
+.container .child-container .bucket .shadow {
+	width: 6%;
+	top: 71%;
+	height: 0.7vh;
+	border-radius: 50%;
+	position: fixed;
+	background-color: white;
+	filter: blur(5px)
+}
+#ball1 {
+	animation: bounceA 2s linear infinite;
+}
+#ball2 {
+	animation: bounceB 2s linear infinite;
+}
+#ball3 {
+	animation: bounceC 2s linear infinite;
+}
+#ball4 {
+	animation: bounceD 2s linear infinite;
+}
+#ball5 {
+	animation: bounceE 2s linear infinite;
+}
+
+.shadow {
+	top: 62%;
+	position: fixed;
+	border: 2px solid white;
+	filter: blur(3px)
+}
+@keyframes bounceA {
+	0% {
+		margin-top: -30px;
+	}
+	20% {
+		margin-top: -60px;
+	}
+	40% {
+		margin-top: -90px;
+	}
+	60% {
+		margin-top: -60px;
+	}
+	80% {
+		margin-top: -30px;
+	}
+	100% {
+		margin-top: 0px;
+	}
+}
+@keyframes bounceB {
+	0% {
+		margin-top: 0px;
+	}
+	20% {
+		margin-top: -30px;
+	}
+	40% {
+		margin-top: -60px;
+	}
+	60% {
+		margin-top: -90px;
+	}
+	80% {
+		margin-top: -60px;
+	}
+	100% {
+		margin-top: -30px;
+	}
+}
+/*@keyframes bounceC {
+	0% {
+		margin-top: -60px;
+	}
+	20% {
+		margin-top: -90px;
+	}
+	40% {
+		margin-top: 0px;
+	}
+	60% {
+		margin-top: -30px;
+	}
+	80% {
+		margin-top: -60px;
+	}
+	100% {
+		margin-top: -90px;
+	}
+}*/
+@keyframes bounceC {
+	0% {
+		margin-top: -30px;
+	}
+	20% {
+		margin-top: -60px;
+	}
+	40% {
+		margin-top: -90px;
+	}
+	60% {
+		margin-top: -60px;
+	}
+	80% {
+		margin-top: -30px;
+	}
+	100% {
+		margin-top: 0px;
+	}
+}
+@keyframes bounceD {
+	0% {
+		margin-top: 0px;
+	}
+	20% {
+		margin-top: -30px;
+	}
+	40% {
+		margin-top: -60px;
+	}
+	60% {
+		margin-top: -90px;
+	}
+	80% {
+		margin-top: -60px;
+	}
+	100% {
+		margin-top: -30px;
+	}
+}
+@keyframes bounceE {
+	0% {
+		margin-top: -30px;
+	}
+	20% {
+		margin-top: -60px;
+	}
+	40% {
+		margin-top: -90px;
+	}
+	60% {
+		margin-top: -60px;
+	}
+	80% {
+		margin-top: -30px;
+	}
+	100% {
+		margin-top: 0px;
+	}
+}
+</style>
+<body bgcolor="#006E7B">
+	<div class="container">
+		<div class="child-container">
+			<div class="bucket">
+				<div class="ball" id="ball1"></div>
+				<div class="shadow"></div>
+			</div>
+			<div class="bucket">
+				<div class="ball" id="ball2"></div>
+				<div class="shadow"></div>
+			</div>
+			<div class="bucket">
+				<div class="ball" id="ball3"></div>
+				<div class="shadow"></div>
+			</div>
+			<div class="bucket">
+				<div class="ball" id="ball4"></div>
+				<div class="shadow"></div>
+			</div>
+			<div class="bucket">
+				<div class="ball" id="ball5"></div>
+				<div class="shadow"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

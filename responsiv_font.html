@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Font Size</title>
+</head>
+
+<style>
+    /* if we want to make text of our website responsive, them we have to make main HTML font size 10px that is by default 16px
+    pur all the font size values in rem so all take font size according to his parent html font size. Don't use pixels instead rem. */
+    html {
+        /* default:
+        1rem = 16px (make 16 px to 10px);
+        if 
+        16px = 100% font size
+        1px = 6.25% ( 10/16 )
+        so 10px = 62.5%
+        so make default HTML value: */
+        font-size: 62.5%;
+    }   
+    h1 {
+        font-size: 4rem; /* because 4rem = 40px */
+    }
+</style>
+
+<body>
+    <h1>Hello World</h1>
+    <h2>Hello World</h2>
+    <h3>Hello World</h3>
+    <h4>Hello World</h4>
+    <h5>Hello World</h5>
+    <h6>Hello World</h6>
+</body>
+
+</html>

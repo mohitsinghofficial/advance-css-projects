@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/bower.svg">
+    <title>Bouncing Balls</title>
+</head>
+<script>
+    function stopA() {
+        document.bgColor = "red";
+        // document.li.style.bg = none;
+    }
+</script>
+<style>
+    body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        background-attachment: fixed;
+        background-image: url(images/3dRoom.jpg);
+        background-size: 100% 100%;
+    }
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        list-style: none;
+        position: relative;
+        top: 35vh;
+    }
+    ul li {
+        height: 10vh;
+        width: 10vh;
+        border-radius: 50%;
+        background-image: linear-gradient(to bottom, #008cff, #004d8d);
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        z-index: 5;
+        animation: bounce 1s infinite;
+    }
+    span {
+        height: 1vh;
+        width: 8vw;
+        position: fixed;
+        margin-right: -6vw;
+        border-radius: 50%;
+        background-color: black;
+        box-shadow: 0 0 20px rgba(0,0,0,0.9);
+        filter: blur(10px);
+        position: relative;
+        top: 10.5vh;
+        right: 6vw;
+    }
+    @keyframes bounce {
+        0% {transform: translateY(0vh);}
+        30% {transform: translateY(-50vh);}
+        50% {transform: translateY(0vh);}
+        80% {transform: translateY(-6vh);}
+        100% {transform: translateY(0vh);}
+        /* 100% {transform: translateY(-10vh);} */
+    }
+    li:nth-child(1) {
+        animation-delay: 0ms;
+    }
+    li:nth-child(3) {
+        animation-delay: 100ms;
+    }
+    li:nth-child(5) {
+        animation-delay: 200ms;
+    }
+    li:nth-child(7) {
+        animation-delay: 300ms;
+    }
+    li:nth-child(9) {
+        animation-delay: 400ms;
+    }
+    li:nth-child(11) {
+        animation-delay: 500ms;
+    }
+    li:nth-child(13) {
+        animation-delay: 600ms;
+    }
+    li:nth-child(15) {
+        animation-delay: 700ms;
+    }
+</style>
+<body>
+    <ul>
+        <li></li>
+        <span></span>
+        <li></li>
+        <span></span>
+        <li></li>
+        <span></span>
+        <li></li>
+        <span></span>
+        <li></li>
+        <span></span>
+        <li></li>
+        <span></span>
+        <li></li>
+        <span></span>
+        <li></li>
+        <span></span>
+    </ul>
+
+    <!-- <button onClick="stopA()" >Click to Stop</button> -->
+
+</body>
+</html>

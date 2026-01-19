@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clickable Effect</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background-color: #00ffdd;
+    }
+    a {
+        position: relative;
+        text-decoration: none;
+        background-color: #0095ff;
+        color: #fff;
+        font-size: 3em;
+        padding: 10px 20px;
+        border-radius: 20px;
+        transition: all 0.3s;
+    }
+    a:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 20px;
+        background-color: #0095ff;
+        z-index: -1;
+        transition: all 100ms;
+    }
+    a:active::before {
+        border-radius: 30px;
+        opacity: 0;
+        transform: scaleX(1.2) scaleY(1.6);
+    }
+    a:active {
+        transform: translateY(5px);
+        box-shadow: 0 5px 40px rgba(0,0,0,0.3);
+    }
+    a:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 30px 40px rgba(0,0,0,0.2);
+    }
+</style>
+<body>
+    <a href="" target="_here">BUTTON</a>
+</body>
+</html>
